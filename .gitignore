@@ -1,0 +1,23 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Large ML artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+cache/
+outputs/
+wandb/
+
+# Kaggle / generated outputs
+/kaggle/
+delta_tokenizer_v5/cache/
+delta_tokenizer_v5/*.pt
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
