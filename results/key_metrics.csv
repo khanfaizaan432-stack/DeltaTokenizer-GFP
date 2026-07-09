@@ -1,0 +1,10 @@
+category,method,tokens,val_spearman,test_spearman,test_pearson,test_mse,notes
+fitness,ESM mean-pool Ridge,full mean-pool,0.626651,0.583438,0.620434,1.237838,Frozen ESM-2 mean-pool + Ridge baseline
+fitness,DeltaMamba DMS-aux,256,0.801896,0.677679,0.904885,0.286401,"Mamba adapter with DMS auxiliary loss, single seed"
+fitness,DeltaMamba no-aux,256,0.797719,0.679027,0.901140,0.296935,"Mamba adapter trained only on fluorescence fitness loss, single seed"
+tokenizer,FullTokenHead,256,0.609199,0.593935,0.729954,0.760292,"Same gated-token head using all valid ESM tokens"
+tokenizer,RandomTokenizer,64,0.572595,0.575694,0.630384,1.311323,64 random local-window tokens
+tokenizer,UniformTokenizer,64,0.598590,0.591607,0.701477,0.932118,64 evenly spaced local-window tokens
+tokenizer,DMS-guided tokenizer,64,0.609129,0.608109,0.699766,1.130509,64 local-window tokens selected by DMS sensitivity
+tokenizer,DMS-aux pos_imp tokenizer,64,0.622332,0.600682,0.746799,0.791338,64 local-window tokens selected by DMS-aux adapter importance
+tokenizer,No-aux pos_imp tokenizer,64,0.677030,0.630232,0.774622,0.734224,"64 local-window tokens selected by no-aux adapter importance; rho vs DMS = -0.143491"
